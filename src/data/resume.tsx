@@ -194,10 +194,11 @@ export const DATA = {
     },
     {
       title: "KarmC",
-      href: "https://play.google.com/store/apps/details?id=com.hmedia_bhu_vision&hl=en",
+      href: "https://karmc.krishitantra.com/",
       dates: "Oct 2023 - Jan 2024",
       active: true,
       description:
+        // "Developed a web application for soil testing using React, designed to enhance farming productivity by providing real-time data insights to users. Led the UI/UX optimization and successfully integrated IoT-enabled soil testing devices for seamless data collection, improving the overall user experience.",
         "Worked on the KarmC project, focusing on real-time carbon emission tracking and strategies to reduce user carbon footprints. Developed dynamic React components, integrated GraphQL APIs, and implemented data synchronization using Node.js and MongoDB to ensure accurate and seamless tracking across platforms",
       technologies: [
         "React.js",
@@ -211,13 +212,13 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Play Store",
-          href: "https://play.google.com/store/apps/details?id=com.hmedia_bhu_vision&hl=en",
+          type: "Website",
+          href: "https://karmc.krishitantra.com/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
-      video: "/video/shc_video.mp4",
+      video: "/video/Karmc.mp4",
     },
     {
       title: "API Documentation Tool",
