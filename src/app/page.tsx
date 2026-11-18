@@ -31,7 +31,7 @@ const SKILL_CATEGORIES = [
   },
   {
     name: "Databases",
-    skills: ["MongoDB (Aggregation Pipelines, Indexing)"],
+    skills: ["MongoDB"],
   },
   {
     name: "Cloud & Development Tools",
