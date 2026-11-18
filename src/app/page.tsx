@@ -19,43 +19,36 @@ const SKILL_CATEGORIES = [
     skills: ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3"],
   },
   {
-    name: "Frontend",
-    skills: ["React.js", "Redux"],
-  },
-  {
-    name: "Backend & APIs",
+    name: "Frameworks & Libraries",
     skills: [
+      "React.js",
       "Node.js",
       "Express.js",
       "GraphQL",
       "REST APIs",
       "JWT Authentication",
-      "Role-Based Access Control (RBAC)",
     ],
   },
   {
-    name: "Database",
-    skills: ["MongoDB", "Aggregation Pipelines", "Indexing"],
+    name: "Databases",
+    skills: ["MongoDB (Aggregation Pipelines, Indexing)"],
   },
   {
-    name: "Cloud & DevOps",
+    name: "Cloud & Development Tools",
     skills: [
-      "Google Cloud Storage (GCS)",
-      "Microsoft Azure",
+      "Git",
+      "GitLab",
       "Docker",
+      "Google Cloud Storage (GCS)",
       "Kubernetes",
+      "Microsoft Azure",
+      "Postman",
+      "VS Code",
     ],
-  },
-  {
-    name: "Tools & Workflow",
-    skills: ["Git", "GitLab", "Postman", "VS Code"],
   },
 ] as const;
 
 export default function Page() {
-  const categorizedSkillSet = new Set<string>(SKILL_CATEGORIES.flatMap((c) => c.skills));
-  const uncategorizedSkills = DATA.skills.filter((skill) => !categorizedSkillSet.has(skill));
-
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-16">
       {/* Hero Section: 55/45 Editorial Split */}
@@ -174,44 +167,18 @@ export default function Page() {
           <h2 className="text-xl font-bold tracking-tight text-foreground mb-1">Skills</h2>
         </BlurFade>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
-          {SKILL_CATEGORIES.map((category, catId) => {
-            const skillsInCategory = category.skills.filter((skill) =>
-              DATA.skills.includes(skill)
-            );
-            if (skillsInCategory.length === 0) return null;
-            return (
-              <BlurFade
-                key={category.name}
-                delay={BLUR_FADE_DELAY * 10 + catId * 0.05}
-                className="h-full flex flex-col"
-              >
-                <div className="flex flex-col h-full rounded-2xl border border-border/60 bg-card/40 p-4 sm:p-5 hover:border-border transition-colors">
-                  <div className="text-xs font-semibold text-foreground tracking-wide border-b border-border/40 pb-2 mb-3 flex items-center justify-between">
-                    <span>{category.name}</span>
-                  </div>
-                  <div className="flex flex-wrap gap-1.5 content-start">
-                    {skillsInCategory.map((skill) => (
-                      <Badge
-                        key={skill}
-                        variant="secondary"
-                        className="text-xs font-normal px-2.5 py-1 rounded-md bg-secondary/80 hover:bg-secondary text-secondary-foreground border border-border/30 transition-colors"
-                      >
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              </BlurFade>
-            );
-          })}
-          {uncategorizedSkills.length > 0 && (
-            <BlurFade delay={BLUR_FADE_DELAY * 11} className="h-full flex flex-col">
+          {SKILL_CATEGORIES.map((category, catId) => (
+            <BlurFade
+              key={category.name}
+              delay={BLUR_FADE_DELAY * 10 + catId * 0.05}
+              className="h-full flex flex-col"
+            >
               <div className="flex flex-col h-full rounded-2xl border border-border/60 bg-card/40 p-4 sm:p-5 hover:border-border transition-colors">
-                <div className="text-xs font-semibold text-foreground tracking-wide border-b border-border/40 pb-2 mb-3">
-                  <span>Other</span>
+                <div className="text-xs font-semibold text-foreground tracking-wide border-b border-border/40 pb-2 mb-3 flex items-center justify-between">
+                  <span>{category.name}</span>
                 </div>
                 <div className="flex flex-wrap gap-1.5 content-start">
-                  {uncategorizedSkills.map((skill) => (
+                  {category.skills.map((skill) => (
                     <Badge
                       key={skill}
                       variant="secondary"
@@ -223,7 +190,7 @@ export default function Page() {
                 </div>
               </div>
             </BlurFade>
-          )}
+          ))}
         </div>
       </section>
 
