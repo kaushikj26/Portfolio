@@ -41,69 +41,55 @@ export const ResumeCard = ({
   return (
     <Link
       href={href || "#"}
-      className="block cursor-pointer"
+      target={href ? "_blank" : undefined}
+      rel={href ? "noopener noreferrer" : undefined}
+      className="block cursor-pointer h-full group"
       onClick={handleClick}
     >
-      <Card className="flex">
-        <div className="flex-none">
-          <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+      <Card className="flex flex-col h-full p-4 rounded-2xl border border-border/60 hover:border-border transition-all duration-300 bg-card/50 hover:bg-card/90 hover:shadow-sm">
+        <div className="flex items-center justify-between gap-2 mb-3">
+          <Avatar className="border size-10 rounded-xl bg-muted dark:bg-muted/40 p-1">
             <AvatarImage
               src={logoUrl}
               alt={altText}
               className="object-contain"
             />
-            <AvatarFallback>{altText[0]}</AvatarFallback>
+            <AvatarFallback className="rounded-xl text-xs">{altText[0]}</AvatarFallback>
           </Avatar>
+          <span className="text-[11px] sm:text-xs tabular-nums text-muted-foreground font-medium px-2 py-0.5 rounded-full bg-secondary/80 border border-border/30 whitespace-nowrap">
+            {period}
+          </span>
         </div>
-        <div className="flex-grow ml-4 items-center flex-col group">
-          <CardHeader>
-            <div className="flex items-center justify-between gap-x-2 text-base">
-              <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
-                {title}
-                {badges && (
-                  <span className="inline-flex gap-x-1">
-                    {badges.map((badge, index) => (
-                      <Badge
-                        variant="secondary"
-                        className="align-middle text-xs"
-                        key={index}
-                      >
-                        {badge}
-                      </Badge>
-                    ))}
-                  </span>
-                )}
-                <ChevronRightIcon
-                  className={cn(
-                    "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
-                    isExpanded ? "rotate-90" : "rotate-0"
-                  )}
-                />
-              </h3>
-              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
-                {period}
-              </div>
-            </div>
-            {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
-          </CardHeader>
-          {description && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{
-                opacity: isExpanded ? 1 : 0,
 
-                height: isExpanded ? "auto" : 0,
-              }}
-              transition={{
-                duration: 0.7,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="mt-2 text-xs sm:text-sm"
-            >
-              {description}
-            </motion.div>
+        <div className="flex flex-col flex-grow">
+          <h3 className="font-semibold text-sm sm:text-base text-foreground leading-snug group-hover:text-foreground">
+            {title}
+          </h3>
+          {subtitle && (
+            <div className="text-xs sm:text-sm text-muted-foreground/90 mt-1.5 leading-relaxed">
+              {subtitle}
+            </div>
           )}
         </div>
+
+        {description && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{
+              opacity: isExpanded ? 1 : 0,
+              height: isExpanded ? "auto" : 0,
+            }}
+            transition={{
+              duration: 0.4,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            className="overflow-hidden"
+          >
+            <p className="mt-2.5 pt-2 border-t border-border/40 text-xs text-muted-foreground/90 leading-relaxed">
+              {description}
+            </p>
+          </motion.div>
+        )}
       </Card>
     </Link>
   );

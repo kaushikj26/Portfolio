@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "Passionate about leveraging technology to build innovative solutions that enhance user experiences.",
   summary:
-    "Full Stack Developer with 2 years of experience in designing, developing, and optimizing web applications. Skilled in React, Node.js, MongoDB, and GraphQL with expertise in building scalable APIs, enhancing system performance, and implementing secure authentication. Strong understanding of backend development, database management, and API integrations. Experienced in collaborating with diverse teams to develop high-performing applications. Focused on problem-solving and enhancing user experience through scalable software solutions.",
+    "Full Stack Developer with 3+ years of experience building and maintaining web applications using React.js, Node.js, MongoDB, and GraphQL. Experienced in developing RESTful APIs, optimizing database performance, implementing secure authentication, and building interactive dashboards. Skilled in backend processing, API integrations, and developing scalable application features. Focused on writing maintainable code, solving technical challenges, and delivering reliable user-focused solutions.",
   avatarUrl: "/kaushik.png",
   resumeDownloadIconUrl: {
     icon: Icons.globe,
@@ -78,20 +78,20 @@ export const DATA = {
 
   work: [
     {
-      company: "Krishitantra (Startup)",
+      company: "Krishitantra - Klonec Automations Private Limited",
       href: "https://krishitantra.com/",
       badges: [],
       location: "Mangalore, India",
-      title: "Junior Software Developer",
+      title: "Software Engineer",
       logoUrl: "/krishitantra_logo.png",
       start: "March 2023",
       end: "Present",
       description:
         "Krishitantra is an agritech startup focused on providing cutting-edge soil testing solutions through IoT-enabled devices.",
       pointers: [
-        "Played a key role in the Government of India’s Soil Health Card (SHC) project as a Backend Node.js Developer and React Frontend Web Developer, enhancing system performance and user experience. The project received positive feedback from the Government Ministry.",
-        "Contributed to the KarmC project, focusing on real-time carbon emission tracking and strategies to reduce user carbon footprints.",
-        "Developed an API Documentation Tool, building a centralized platform to enhance accessibility and developer productivity. Designed and integrated APIs with the user interface and created an interactive API testing and validation interface to streamline integration processes."
+        "Developed and maintained full-stack web application features using React.js, Node.js, MongoDB, and GraphQL across government and enterprise projects.",
+        "Built and integrated backend APIs, optimized database queries, and implemented data-processing workflows to improve application performance and reliability.",
+        "Developed interactive frontend components, dashboards, authentication workflows, and API integrations to support business requirements across multiple applications.",
       ],
     },
     {
@@ -170,14 +170,14 @@ export const DATA = {
       dates: "March 2023 - Present",
       active: true,
       description:
-        "Contributed to the Government of India’s Soil Health Card project, improving system performance and user experience. Worked on backend optimization using MongoDB aggregation, developed GraphQL APIs, and built interactive data visualizations for soil health analytics.",
+        "Contributed to the Government of India's Soil Health Card project, a nationwide initiative for soil health assessment and reporting. Worked across frontend and backend development, focusing on database performance optimization, GraphQL API development, automated dashboard data processing, and bulk report generation.",
       technologies: [
         "React.js",
         "Node.js",
         "Express.js",
         "MongoDB",
-        "GraphQL APIs",
-        "UI/UX Design",
+        "GraphQL",
+        "Google Cloud Storage",
         "JWT Authentication",
         "HTML5",
         "CSS3",
@@ -198,12 +198,11 @@ export const DATA = {
       dates: "Oct 2023 - Jan 2024",
       active: true,
       description:
-        // "Developed a web application for soil testing using React, designed to enhance farming productivity by providing real-time data insights to users. Led the UI/UX optimization and successfully integrated IoT-enabled soil testing devices for seamless data collection, improving the overall user experience.",
-        "Worked on the KarmC project, focusing on real-time carbon emission tracking and strategies to reduce user carbon footprints. Developed dynamic React components, integrated GraphQL APIs, and implemented data synchronization using Node.js and MongoDB to ensure accurate and seamless tracking across platforms",
+        "Worked on KarmC, a carbon tracking platform designed to help organizations monitor and analyze their carbon emissions. Contributed to frontend development, GraphQL API integration, backend data synchronization, and secure authentication to support accurate carbon footprint tracking across organizational categories.",
       technologies: [
         "React.js",
         "Node.js",
-        "GraphQL APIs",
+        "GraphQL",
         "Express.js",
         "MongoDB",
         "JWT Authentication",
@@ -226,11 +225,11 @@ export const DATA = {
       dates: "April 2024 - Sept 2024",
       active: true,
       description:
-        "Developed an API Documentation Tool, building a centralized platform to enhance accessibility and developer productivity. Designed and integrated APIs with the user interface and created an interactive API testing and validation interface to streamline integration processes. Integrated automated update notifications to keep users informed of API changes.",
+        "Developed a centralized API documentation platform for internal teams and external API consumers to explore and test APIs. Built interactive API testing features, integrated backend services for API schema generation and updates, and implemented change notifications to keep users informed about documentation updates.",
       technologies: [
         "React.js",
         "Node.js",
-        "GraphQL APIs",
+        "GraphQL",
         "Express.js",
         "MongoDB",
         "JWT Authentication",
@@ -253,7 +252,7 @@ export const DATA = {
       dates: "Nov 2022 - Jan 2023",
       active: true,
       description:
-        "A Full Stack App where different users can define a budget in addition to defining different categories in which a user can add expenses to any of the categories. The summary page shows the expense trend.",
+        "Developed a full-stack expense management application that allows users to set budgets, create expense categories, and track their spending. Implemented expense tracking and summary dashboards to visualize spending trends and help users monitor their budgets. Integrated REST APIs, Redux for state management, and JWT-based authentication.",
       technologies: [
         "React.js",
         "Node.js",
@@ -263,11 +262,6 @@ export const DATA = {
         "JWT Authentication",
       ],
       links: [
-        // {
-        //   type: "Play Store",
-        //   href: "https://play.google.com/store/apps/details?id=com.kirtan.play.treevisualizer",
-        //   icon: <Icons.globe className="size-3" />,
-        // },
         {
           type: "Source",
           href: "https://github.com/kaushikj26/Expense-App",
