@@ -12,18 +12,39 @@ import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
 
+
 const SKILL_CATEGORIES = [
   {
+    name: "Languages",
+    skills: ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3"],
+  },
+  {
     name: "Frontend",
-    skills: ["React.js", "JavaScript (ES5, ES6)", "HTML5", "CSS3"],
+    skills: ["React.js", "Redux"],
   },
   {
     name: "Backend & APIs",
-    skills: ["Node.js", "Express.js", "GraphQL", "RESTful APIs", "JWT Authentication"],
+    skills: [
+      "Node.js",
+      "Express.js",
+      "GraphQL",
+      "REST APIs",
+      "JWT Authentication",
+      "Role-Based Access Control (RBAC)",
+    ],
   },
   {
     name: "Database",
-    skills: ["MongoDB"],
+    skills: ["MongoDB", "Aggregation Pipelines", "Indexing"],
+  },
+  {
+    name: "Cloud & DevOps",
+    skills: [
+      "Google Cloud Storage (GCS)",
+      "Microsoft Azure",
+      "Docker",
+      "Kubernetes",
+    ],
   },
   {
     name: "Tools & Workflow",
